@@ -2,7 +2,7 @@
 var fs = require("fs");
 var text = fs.readFileSync("day-2/input2.txt", "utf-8");
 
-var textByLine = text.split('\n');
+var textByLine = text.trim().split('\n');
 
 var validCount = 0;
 for(let i = 0; i < textByLine.length; i++){
@@ -22,7 +22,7 @@ for(let i = 0; i < textByLine.length; i++){
         return parseInt(item, 10); //gets the number value in base 10 form
     });
 
-    if(charCount >= minMax[0] && charCount <= minMax) {
+    if(charCount >= minMax[0] && charCount <= minMax[1]) {
         validCount++;
     }
 }
